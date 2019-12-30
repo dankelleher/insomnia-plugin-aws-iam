@@ -1,0 +1,22 @@
+{
+  "name": "insomnia-plugin-aws-iam",
+  "version": "1.0.0",
+  "description": "An Insomnia plugin to retrieve aws credentials for use with IAM authentication",
+  "main": "index.js",
+  "insomnia": {
+    "name": "aws-iam"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "keywords": ["insomnia", "aws", "iam"],
+  "author": "Daniel Kelleher",
+  "license": "ISC",
+  "dependencies": {
+    "awscred": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.0",
+    "typescript": "^3.7.4"
+  }
+}
