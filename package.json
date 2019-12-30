@@ -1,8 +1,9 @@
 {
   "name": "insomnia-plugin-aws-iam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Insomnia plugin to retrieve aws credentials for use with IAM authentication",
   "main": "index.js",
+  "repository": "https://github.com/dankelleher/insomnia-plugin-aws-iam",
   "insomnia": {
     "name": "aws-iam"
   },
