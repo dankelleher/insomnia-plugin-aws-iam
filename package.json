@@ -10,14 +10,18 @@
   "scripts": {
     "tsc": "tsc"
   },
-  "keywords": ["insomnia", "aws", "iam"],
+  "keywords": [
+    "insomnia",
+    "aws",
+    "iam"
+  ],
   "author": "Daniel Kelleher",
   "license": "ISC",
   "dependencies": {
     "awscred": "^1.5.0"
   },
   "devDependencies": {
-    "@types/node": "^12.0.0",
+    "@types/node": "^12.12.50",
     "typescript": "^3.7.4"
   }
 }

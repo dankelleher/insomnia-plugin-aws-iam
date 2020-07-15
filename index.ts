@@ -5,7 +5,8 @@ const loadAwsCred = promisify(awscred.load);
 
 enum Attribute {
     accessKeyId = 'accessKeyId',
-    secretAccessKey = 'secretAccessKey'
+    secretAccessKey = 'secretAccessKey',
+    sessionToken = 'sessionToken'
 }
 
 export const templateTags = [
@@ -25,10 +26,19 @@ export const templateTags = [
                     displayName: Attribute.secretAccessKey,
                     value: Attribute.secretAccessKey,
                 },
+                {
+                    displayName: Attribute.sessionToken,
+                    value: Attribute.sessionToken,
+                },
             ]
+        },{
+            displayName: 'Profile',
+            description: 'Profile name',
+            type: 'string',
+            defaultValue: 'default'
         }],
-        async run(context: object, attribute: Attribute) {
-            const loadedCredentialObject = await loadAwsCred();
+        async run(context: object, attribute: Attribute, profile: String) {
+            const loadedCredentialObject = await loadAwsCred({'profile' : profile});
             return loadedCredentialObject.credentials[attribute];
         },
     }
